@@ -11,11 +11,17 @@ public class EnemyControl : MonoBehaviour
     public float agroDistance;
     Animator animator;
     int attackRange = 1;
+    public int health;
+    public int damage;
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
+    private PlayControl player1;
     // Start is called before the first frame update
     void Start()
     {
         physic = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        player1 = FindObjectOfType<PlayControl>();
     }
 
     // Update is called once per frame
@@ -60,6 +66,25 @@ public class EnemyControl : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed*Time.deltaTime);
       
+    }
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (timeBtwAttack <= 0)
+            {
+                animator.SetBool("Attack", true);
+            }
+            else
+            {
+                timeBtwAttack -= Time.deltaTime;
+            }
+        }
+    }
+    public void onEnemyAttack()
+    {
+        player1.health -= damage;
+        timeBtwAttack = startTimeBtwAttack;
     }
 
 }

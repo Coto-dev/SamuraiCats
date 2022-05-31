@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 824516981}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353,7 +353,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de701fd7f11caf5488bb26514e3954db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startTimeBtwAttack: 1
   speed: 10
+  health: 100
+  damage: 10
 --- !u!1 &959831649
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +505,9 @@ MonoBehaviour:
   player: {fileID: 824516980}
   speed: 5
   agroDistance: 10
+  health: 100
+  damage: 10
+  startTimeBtwAttack: 5
 --- !u!61 &964665730
 BoxCollider2D:
   m_ObjectHideFlags: 0

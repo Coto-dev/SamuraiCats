@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class PlayControl : MonoBehaviour
 {
+    
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
     public float speed;
-
+    public int health;
+    public int damage;
     private Rigidbody2D rb;
 
     private Vector2 direction;
@@ -23,7 +27,10 @@ public class PlayControl : MonoBehaviour
 
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
-
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
         //Vector2 moveInput = new Vector2(moveInput.GetAxis("Horizontal"), moveInput.GetAxis("Vertical"));
         //moveVelocity = moveInput * speed;
     }
