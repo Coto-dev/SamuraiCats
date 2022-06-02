@@ -8,4 +8,7 @@ public class For_button : MonoBehaviour
    public void Scenes(int number){
          SceneManager.LoadScene(number);
    }
+   public void ExitApplication(){
+       Application.Quit();
+   }
 }
