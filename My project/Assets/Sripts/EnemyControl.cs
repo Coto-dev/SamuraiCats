@@ -16,6 +16,7 @@ public class EnemyControl : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
     private PlayControl player1;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,11 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            animator.Play("Die");
+            Destroy(gameObject, 0.6f);
+        }
         float distToPlayer = Vector2.Distance(transform.position, player.position);
        
          if(Math.Abs(transform.position.x - player.position.x) < attackRange && Math.Abs(transform.position.y - player.position.y) < attackRange)
@@ -83,8 +89,20 @@ public class EnemyControl : MonoBehaviour
     }
     public void onEnemyAttack()
     {
-        player1.health -= damage;
+        player1.health -= damage*2;
         timeBtwAttack = startTimeBtwAttack;
+    }
+   public void TakeDamage(int damage1)
+    {
+        Debug.Log("takeDamage");
+        health -= damage1;
+        if (health > 0)
+        animator.SetTrigger("Hurt");
+        else
+        {
+                animator.Play("Die");
+                Destroy(gameObject, 0.75f);           
+        }
     }
 
 }
