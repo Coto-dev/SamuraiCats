@@ -104,5 +104,12 @@ public class EnemyControl : MonoBehaviour
                 Destroy(gameObject, 0.75f);           
         }
     }
+    public void Die()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject, 0.6f);
+        }
+    }
 
 }
