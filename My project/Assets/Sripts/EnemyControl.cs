@@ -63,11 +63,11 @@ public class EnemyControl : MonoBehaviour
         //physic.MovePosition(physic.position + direction * speed * Time.fixedDeltaTime);
         if (player.position.x > transform.position.x)
         {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(0.5f, 0.5f);
         }
         else if (player.position.x < transform.position.x)
         {
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector2(-0.5f, 0.5f);
 
         }
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed*Time.deltaTime);
@@ -95,6 +95,7 @@ public class EnemyControl : MonoBehaviour
    public void TakeDamage(int damage1)
     {
         Debug.Log("takeDamage");
+        
         health -= damage1;
         if (health > 0)
         animator.SetTrigger("Hurt");

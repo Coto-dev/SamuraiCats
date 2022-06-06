@@ -79,6 +79,7 @@ public class PlayControl : MonoBehaviour
         {
             Debug.Log("enemies  " + enemies[i]);
             enemies[i].GetComponent<EnemyControl>().TakeDamage(damage*2);
+            Debug.Log(damage*2);
         }
         Debug.Log("EEEEEEEEEEEEEEEEEEEEEEEEE");
         animator.SetBool("attack1", false);
@@ -148,12 +149,12 @@ public class PlayControl : MonoBehaviour
         if (faceIsRight)
         {
             //Debug.Log("SWAPPPPPPP   " + faceIsRight);
-            transform.localScale = new Vector2(0.5f, 0.5f);
+            transform.localScale = new Vector2(0.25f, 0.25f);
         }
         else
         {
            // Debug.Log("SWAPPPPPPP   " + faceIsRight);
-            transform.localScale = new Vector2(-0.5f, 0.5f);
+            transform.localScale = new Vector2(-0.25f, 0.25f);
         }
     }
     private void OnDrawGizmosSelected()
