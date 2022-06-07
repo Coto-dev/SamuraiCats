@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
+
 public class PlayControl : MonoBehaviour
 {
     
@@ -162,4 +164,13 @@ public class PlayControl : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
+
+     private void Update()
+    {
+      if (Input.GetKeyDown(KeyCode.Escape)){
+       SceneManager.LoadScene(0);
+      }
+
+    }
+    
 }
