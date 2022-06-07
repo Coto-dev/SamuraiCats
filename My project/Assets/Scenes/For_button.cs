@@ -11,4 +11,11 @@ public class For_button : MonoBehaviour
    public void ExitApplication(){
        Application.Quit();
    }
+    
+    public void Update()
+    {
+      if (Input.GetKeyDown(KeyCode.Escape)){
+             Application.Quit();
+      }
+    }
 }
