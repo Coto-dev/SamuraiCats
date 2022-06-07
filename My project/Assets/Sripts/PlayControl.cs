@@ -165,10 +165,21 @@ public class PlayControl : MonoBehaviour
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 
+
+    bool playgame = true;
      private void Update()
     {
       if (Input.GetKeyDown(KeyCode.Escape)){
-       SceneManager.LoadScene(0);
+        if (playgame = true){
+            Time.timeScale = 0f;
+            SceneManager.LoadScene(3);
+            playgame = false;
+        }
+        else{
+            Time.timeScale = 1f;
+            playgame = true;
+        }
+
       }
 
     }

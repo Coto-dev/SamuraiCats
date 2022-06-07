@@ -5,17 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class For_button : MonoBehaviour
 {
-   public void Scenes(int number){
-         SceneManager.LoadScene(number);
+   public void Scenes(int number)
+   {
+        SceneManager.LoadScene(number);
    }
-   public void ExitApplication(){
+   public void ExitApplication()
+   {
        Application.Quit();
    }
     
     public void Update()
     {
       if (Input.GetKeyDown(KeyCode.Escape)){
-             Application.Quit();
+        Application.Quit();
       }
     }
 }
