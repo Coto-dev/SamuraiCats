@@ -735,7 +735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646207078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -493.1231, y: -254.9153, z: 5}
+  m_LocalPosition: {x: -529.06, y: -244.56, z: 5}
   m_LocalScale: {x: 3.1477342, y: 2.4287016, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -762,7 +762,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.44229412
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1191,7 +1191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -508.32, y: -245.10641}
+  m_AnchoredPosition: {x: -545, y: -234.88}
   m_SizeDelta: {x: 6.0905, y: 1.7858}
   m_Pivot: {x: -2.104391, y: 1.6218063}
 --- !u!114 &1253542554
@@ -1380,7 +1380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480.77, y: -243.05}
+  m_AnchoredPosition: {x: -516.34, y: -232.65}
   m_SizeDelta: {x: 367.6351, y: 44.704}
   m_Pivot: {x: 0.76679224, y: 8.752018}
 --- !u!114 &1546110338
