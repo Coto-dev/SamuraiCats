@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,444 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18748
+        width: 1770
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81dc7ceec883174d8505a402421fab7
+      internalID: 1977432159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_1
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 18702
+        width: 2243
+        height: 1295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830d194c6ac1e6044a2fb1fc149c2ebf
+      internalID: -1543090533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_2
+      rect:
+        serializedVersion: 2
+        x: 9866
+        y: 16134
+        width: 1040
+        height: 1851
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092ef126e84e71d4a8b575d968425d3a
+      internalID: -1639482662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_3
+      rect:
+        serializedVersion: 2
+        x: 6605
+        y: 2719
+        width: 1642
+        height: 2105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613cfa3306583c34ca6b7395e34b0966
+      internalID: 880556668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_4
+      rect:
+        serializedVersion: 2
+        x: 8524
+        y: 2510
+        width: 1342
+        height: 2267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0caa8a663ee1601449b7e7e562269c42
+      internalID: 1475309841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_5
+      rect:
+        serializedVersion: 2
+        x: 14122
+        y: 5540
+        width: 2752
+        height: 5251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bac9d6a39623243942da2b991ecb2f
+      internalID: -130768788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_6
+      rect:
+        serializedVersion: 2
+        x: 17106
+        y: 5286
+        width: 2313
+        height: 5574
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad192a09340a59548b81879f01988e17
+      internalID: 736049265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_7
+      rect:
+        serializedVersion: 2
+        x: 6883
+        y: 5334
+        width: 2035
+        height: 4786
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4c0bb1bd3d3b9499dc41ea28756e75
+      internalID: -1059746998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_8
+      rect:
+        serializedVersion: 2
+        x: 11716
+        y: 2906
+        width: 2289
+        height: 3931
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e1ad347105ee74cb945323d55b3db4
+      internalID: -683792710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_9
+      rect:
+        serializedVersion: 2
+        x: 10906
+        y: 16178
+        width: 787
+        height: 1249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c6b5c945f6721409303604cb9d36aa
+      internalID: 1002736211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_10
+      rect:
+        serializedVersion: 2
+        x: 14236
+        y: 178
+        width: 5596
+        height: 4393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c928280a660224caec5c08d9ca0e36
+      internalID: -1059022587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_11
+      rect:
+        serializedVersion: 2
+        x: 8109
+        y: 363
+        width: 1595
+        height: 2127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67290c2c0dd7e574097b209d274277bc
+      internalID: 1639078524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_12
+      rect:
+        serializedVersion: 2
+        x: 10166
+        y: 224
+        width: 1480
+        height: 2173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cb73ce63d697f4d90d6e5235369355
+      internalID: -1831543245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_13
+      rect:
+        serializedVersion: 2
+        x: 10259
+        y: 2490
+        width: 1457
+        height: 2220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c194f89db5bba0749912683361ca1eec
+      internalID: 341785276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_14
+      rect:
+        serializedVersion: 2
+        x: 8409
+        y: 2605
+        width: 1387
+        height: 2151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431d8931504b21c4496cd4d4e42eea75
+      internalID: 764498475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_15
+      rect:
+        serializedVersion: 2
+        x: 11877
+        y: 270
+        width: 1665
+        height: 2359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01872da17638bc344a8489d43264ab76
+      internalID: -1077209088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_16
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 14513
+        width: 1642
+        height: 1804
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de830a3cf952f5a4995d538850c8a395
+      internalID: -1826878882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_17
+      rect:
+        serializedVersion: 2
+        x: 2952
+        y: 12849
+        width: 2636
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03477962561fc4644a451d1a76da4d21
+      internalID: -1715150762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FeudalUrbanJapan0_18
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 14745
+        width: 1641
+        height: 1433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef69f20efd8654142a070f6ad9ab1658
+      internalID: -116008698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +524,26 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FeudalUrbanJapan0_15: -1077209088
+      FeudalUrbanJapan0_14: 764498475
+      FeudalUrbanJapan0_8: -683792710
+      FeudalUrbanJapan0_9: 1002736211
+      FeudalUrbanJapan0_17: -1715150762
+      FeudalUrbanJapan0_3: 880556668
+      FeudalUrbanJapan0_0: 1977432159
+      FeudalUrbanJapan0_5: -130768788
+      FeudalUrbanJapan0_13: 341785276
+      FeudalUrbanJapan0_2: -1639482662
+      FeudalUrbanJapan0_18: -116008698
+      FeudalUrbanJapan0_10: -1059022587
+      FeudalUrbanJapan0_16: -1826878882
+      FeudalUrbanJapan0_1: -1543090533
+      FeudalUrbanJapan0_11: 1639078524
+      FeudalUrbanJapan0_4: 1475309841
+      FeudalUrbanJapan0_12: -1831543245
+      FeudalUrbanJapan0_6: 736049265
+      FeudalUrbanJapan0_7: -1059746998
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
