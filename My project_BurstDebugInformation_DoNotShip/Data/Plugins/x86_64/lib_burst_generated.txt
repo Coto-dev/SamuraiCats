@@ -7,7 +7,7 @@ Library: lib_burst_generated
 --float-precision=Standard
 --format=Coff
 --disable-warnings=BC1370
---compilation-defines=UNITY_2021_3_3
+--compilation-defines=UNITY_2021_3_4
 --compilation-defines=UNITY_2021_3
 --compilation-defines=UNITY_2021
 --compilation-defines=UNITY_5_3_OR_NEWER
@@ -102,7 +102,6 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_MONO
 --compilation-defines=NET_STANDARD_2_0
 --compilation-defines=NET_STANDARD
---compilation-defines=UNITY_SERVER
 --compilation-defines=ENABLE_CUSTOM_RENDER_TEXTURE
 --compilation-defines=ENABLE_DIRECTOR
 --compilation-defines=ENABLE_LOCALIZATION
@@ -171,7 +170,7 @@ Library: lib_burst_generated
 --float-precision=Standard
 --format=Coff
 --disable-warnings=BC1370
---compilation-defines=UNITY_2021_3_3
+--compilation-defines=UNITY_2021_3_4
 --compilation-defines=UNITY_2021_3
 --compilation-defines=UNITY_2021
 --compilation-defines=UNITY_5_3_OR_NEWER
@@ -266,7 +265,6 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_MONO
 --compilation-defines=NET_STANDARD_2_0
 --compilation-defines=NET_STANDARD
---compilation-defines=UNITY_SERVER
 --compilation-defines=ENABLE_CUSTOM_RENDER_TEXTURE
 --compilation-defines=ENABLE_DIRECTOR
 --compilation-defines=ENABLE_LOCALIZATION
