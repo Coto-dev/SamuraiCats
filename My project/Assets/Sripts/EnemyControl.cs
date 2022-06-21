@@ -89,10 +89,11 @@ public class EnemyControl : MonoBehaviour
     }
     public void onEnemyAttack()
     {
-        player1.health -= damage*2;
+        player1.TakeDamage(damage);
+        player1.health -= damage * 2;
         timeBtwAttack = startTimeBtwAttack;
     }
-   public void TakeDamage(int damage1)
+    public void TakeDamage(int damage1)
     {
         Debug.Log("takeDamage");
         

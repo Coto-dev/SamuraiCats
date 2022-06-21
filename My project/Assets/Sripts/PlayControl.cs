@@ -14,27 +14,35 @@ public class PlayControl : MonoBehaviour
     public int damage;
     private Rigidbody2D rb;
     Animator animator;
+    Animator magAnim;
     private Vector2 direction;
     private float lastPosition = 9999;
     private bool faceIsRight = true;
     public Transform attackPos;
+    public Transform magic;
     public LayerMask enemy;
     public float attackRange;
+    public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
+        healthBar.SetMaxHealth(500);
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        magAnim = magic.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    private void LateUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            magAnim.SetTrigger("Fire");
+        }
+    }
     void FixedUpdate()
     {
-        /*if (Input.GetKeyDown(KeyCode.Q))
-        {
-            animator.SetTrigger("fire");
-        }*/
         
+
         if (timeBtwAttack <= 0)
         {
             
@@ -72,7 +80,13 @@ public class PlayControl : MonoBehaviour
         }
         
     }
-   public void Attack1()
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        healthBar.SetHealth(health);
+    }
+    public void Attack1()
     {
         
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
@@ -170,7 +184,7 @@ public class PlayControl : MonoBehaviour
      private void Update()
     {
       if (Input.GetKeyDown(KeyCode.Escape)){
-        if (playgame = true){
+        if (playgame == true){
             Time.timeScale = 0f;
             SceneManager.LoadScene(3);
             playgame = false;

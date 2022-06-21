@@ -137,9 +137,10 @@ MonoBehaviour:
   health: 1111
   damage: 10
   attackPos: {fileID: 718520026096610673}
+  magic: {fileID: 0}
   enemy:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 8388616
   attackRange: 1
 --- !u!61 &718520026813342152
 BoxCollider2D:
