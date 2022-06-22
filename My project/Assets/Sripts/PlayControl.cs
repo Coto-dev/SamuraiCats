@@ -76,7 +76,7 @@ public class PlayControl : MonoBehaviour
        
         if (health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(4);
         }
         
     }
@@ -110,7 +110,15 @@ public class PlayControl : MonoBehaviour
         for (int i = 0; i < enemies.Length; i++)
         {
             Debug.Log("enemies  " + enemies[i]);
-            enemies[i].GetComponent<EnemyControl>().TakeDamage(damage);
+            try
+            {
+                enemies[i].GetComponent<EnemyControl>().TakeDamage(damage);
+            }
+            catch
+            {
+                enemies[i].GetComponent<BossControl>().TakeDamage(damage);
+
+            }
         }
         Debug.Log("EEEEEEEEEEEEEEEEEEEEEEEEE");
         animator.SetBool("attack1", false);
@@ -138,20 +146,21 @@ public class PlayControl : MonoBehaviour
             animator.SetBool("Walk", false);
             
             animator.SetBool("idle", true);
+           // transform.localScale = new Vector2(-0.25f, 0.25f);
         }
 
-       if (lastPosition == 9999)
-            lastPosition = transform.position.x;
+      /* if (lastPosition == 9999)
+            lastPosition = transform.position.x;*/
 
         if (transform.position.x > lastPosition)
         {
           //  Debug.Log("faceIsRight" + faceIsRight);
             faceIsRight = true;
-
+            Debug.Log("faceIsRight   " + faceIsRight);
         }
         else if (transform.position.x < lastPosition)
         {
-           
+            Debug.Log("faceIsRight   " + faceIsRight);
             faceIsRight = false;
 
         }
@@ -164,7 +173,7 @@ public class PlayControl : MonoBehaviour
     {
         if (faceIsRight)
         {
-            //Debug.Log("SWAPPPPPPP   " + faceIsRight);
+           // Debug.Log("SWAPPPPPPP   " + faceIsRight);
             transform.localScale = new Vector2(0.25f, 0.25f);
         }
         else
