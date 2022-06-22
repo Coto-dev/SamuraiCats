@@ -23,15 +23,8 @@ public class MagicOff : MonoBehaviour
         for (int i = 0; i < enemies.Length; i++)
         {
             Debug.Log("enemies  " + enemies[i]);
-            try
-            {
-                enemies[i].GetComponent<EnemyControl>().TakeDamage(30);
-            }
-            catch
-            {
-                enemies[i].GetComponent<BossControl>().TakeDamage(30);
-
-            }
+            enemies[i].GetComponent<EnemyControl>().TakeDamage(50);
+            Debug.Log(50);
         }
         magAnim.SetTrigger("NoFire");
     }
