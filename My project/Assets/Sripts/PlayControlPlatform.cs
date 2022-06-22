@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 
+
 public class PlayControlPlatform : MonoBehaviour
 {
 
@@ -25,6 +26,30 @@ public class PlayControlPlatform : MonoBehaviour
 	private float rotationY;
 	private bool jump;
 
+
+	private float timeBtwAttack;
+	public float startTimeBtwAttack;
+	//public float speed;
+	public int health;
+	public int damage;
+	private Rigidbody2D rb;
+	Animator animator;
+	Animator magAnim;
+	//private Vector2 direction;
+	private float lastPosition = 9999;
+	private bool faceIsRight = true;
+	public Transform attackPos;
+	public Transform magic;
+	public LayerMask enemy;
+	public float attackRange;
+	public HealthBar healthBar;
+
+
+	struct cPoint
+    {
+		//posX// = 55.8;
+		//posY;// = -1.9;
+    }
 	void Start()
 	{
 		body = GetComponent<Rigidbody2D>();
@@ -44,6 +69,11 @@ public class PlayControlPlatform : MonoBehaviour
 			body.drag = 10;
 			jump = true;
 		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D Death)
+	{
+		body.position = new Vector2(55.8f, -1.9f);
 	}
 
 	void OnCollisionExit2D(Collision2D coll)
