@@ -26,7 +26,7 @@ public class PlayControlPlatform : MonoBehaviour
 	private float rotationY;
 	private bool jump;
 
-
+	
 	private float timeBtwAttack;
 	public float startTimeBtwAttack;
 	//public float speed;
@@ -45,11 +45,14 @@ public class PlayControlPlatform : MonoBehaviour
 	public HealthBar healthBar;
 
 
-	struct cPoint
-    {
-		//posX// = 55.8;
-		//posY;// = -1.9;
-    }
+	//struct cPoint
+ //   {
+	//	//posX// = 55.8;
+	//	//posY;// = -1.9;
+ //   }
+
+	Vector2 cPoint = new Vector2(96f, 29f);
+
 	void Start()
 	{
 		body = GetComponent<Rigidbody2D>();
@@ -71,9 +74,16 @@ public class PlayControlPlatform : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerEnter2D(Collider2D Death)
+    //private void OnTriggerEnter2D(Collider2D cPoint)
+    //{
+    //    //cPoint = Vector2(Mathf.Sign(body.position.x), Mathf.Sign(body.position.y));
+    //    cout << body.position;
+    //}
+
+    private void OnTriggerEnter2D(Collider2D Death)
 	{
 		body.position = new Vector2(55.8f, -1.9f);
+		//body.position = new Vector2(82.87f, 40f);
 	}
 
 	void OnCollisionExit2D(Collision2D coll)
@@ -84,7 +94,7 @@ public class PlayControlPlatform : MonoBehaviour
 			jump = false;
 		}
 	}
-
+	
 	void FixedUpdate()
 	{
 		body.AddForce(direction * body.mass * speed);
