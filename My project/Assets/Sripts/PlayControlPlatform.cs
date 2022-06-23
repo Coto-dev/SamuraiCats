@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 
+
 public class PlayControlPlatform : MonoBehaviour
 {
 
@@ -24,6 +25,33 @@ public class PlayControlPlatform : MonoBehaviour
 	private Rigidbody2D body;
 	private float rotationY;
 	private bool jump;
+
+	
+	private float timeBtwAttack;
+	public float startTimeBtwAttack;
+	//public float speed;
+	public int health;
+	public int damage;
+	private Rigidbody2D rb;
+	Animator animator;
+	Animator magAnim;
+	//private Vector2 direction;
+	private float lastPosition = 9999;
+	private bool faceIsRight = true;
+	public Transform attackPos;
+	public Transform magic;
+	public LayerMask enemy;
+	public float attackRange;
+	public HealthBar healthBar;
+
+
+	//struct cPoint
+ //   {
+	//	//posX// = 55.8;
+	//	//posY;// = -1.9;
+ //   }
+
+	Vector2 cPoint = new Vector2(96f, 29f);
 
 	void Start()
 	{
@@ -46,6 +74,18 @@ public class PlayControlPlatform : MonoBehaviour
 		}
 	}
 
+    //private void OnTriggerEnter2D(Collider2D cPoint)
+    //{
+    //    //cPoint = Vector2(Mathf.Sign(body.position.x), Mathf.Sign(body.position.y));
+    //    cout << body.position;
+    //}
+
+    private void OnTriggerEnter2D(Collider2D Death)
+	{
+		body.position = new Vector2(55.8f, -1.9f);
+		//body.position = new Vector2(82.87f, 40f);
+	}
+
 	void OnCollisionExit2D(Collision2D coll)
 	{
 		if (coll.transform.tag == "Ground")
@@ -54,7 +94,7 @@ public class PlayControlPlatform : MonoBehaviour
 			jump = false;
 		}
 	}
-
+	
 	void FixedUpdate()
 	{
 		body.AddForce(direction * body.mass * speed);
