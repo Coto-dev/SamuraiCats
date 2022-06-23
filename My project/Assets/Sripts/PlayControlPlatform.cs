@@ -44,20 +44,26 @@ public class PlayControlPlatform : MonoBehaviour
 	public float attackRange;
 	public HealthBar healthBar;
 
+Vector2 CPoint = new Vector2(55.8f, -1.9f);
 
-	//struct cPoint
- //   {
-	//	//posX// = 55.8;
-	//	//posY;// = -1.9;
- //   }
+  //  class cPoint
+  //  {
+		//
+  //      public void OnTriggerEnter2D(Collider2D cPoint)
+  //      {
+  //          CPoint = body.position;
+  //          Debug.Log(body.position);
+  //      }
+  //  }
 
-	Vector2 cPoint = new Vector2(96f, 29f);
+	//Vector2 cPoint = new Vector2(96f, 29f);
 
 	void Start()
 	{
 		body = GetComponent<Rigidbody2D>();
 		body.fixedAngle = true;
 
+		//CPoint = new Vector2(55.8f, -1.9f);
 		if (projectAxis == ProjectAxis.xAndY)
 		{
 			body.gravityScale = 0;
@@ -74,17 +80,28 @@ public class PlayControlPlatform : MonoBehaviour
 		}
 	}
 
-    //private void OnTriggerEnter2D(Collider2D cPoint)
-    //{
-    //    //cPoint = Vector2(Mathf.Sign(body.position.x), Mathf.Sign(body.position.y));
-    //    cout << body.position;
-    //}
 
-    private void OnTriggerEnter2D(Collider2D Death)
+	public void OnTriggerEnter2D(Collider2D other)
 	{
-		body.position = new Vector2(55.8f, -1.9f);
-		//body.position = new Vector2(82.87f, 40f);
+		if (other.CompareTag("cPoint"))
+		{
+			CPoint = body.position;
+		}
+		else
+            if (other.CompareTag("Death"))
+        {
+			body.velocity = body.velocity * 0;
+			body.position = CPoint;
+			
+		}
 	}
+
+	//		void OnTriggerEnter2D(Collider2D Death)
+	//{
+	//	body.position = CPoint;
+	//	//Debug.Log(body.position);
+	//	//body.position = new Vector2(82.87f, 40f);
+	//}
 
 	void OnCollisionExit2D(Collision2D coll)
 	{
