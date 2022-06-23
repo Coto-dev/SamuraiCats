@@ -15,11 +15,13 @@ public class PlayControl : MonoBehaviour
     private Rigidbody2D rb;
     Animator animator;
     Animator magAnim;
+    Animator magAnimWater;
     private Vector2 direction;
     private float lastPosition = 9999;
     private bool faceIsRight = true;
     public Transform attackPos;
     public Transform magic;
+    public Transform magicWater;
     public LayerMask enemy;
     public float attackRange;
     public HealthBar healthBar;
@@ -30,6 +32,7 @@ public class PlayControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         magAnim = magic.GetComponent<Animator>();
+        magAnimWater = magicWater.GetComponent<Animator>();
     }
 
     private void LateUpdate()
@@ -37,6 +40,10 @@ public class PlayControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             magAnim.SetTrigger("Fire");
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            magAnimWater.SetTrigger("Fire");
         }
     }
     void FixedUpdate()
@@ -83,8 +90,8 @@ public class PlayControl : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
         healthBar.SetHealth(health);
+        animator.SetTrigger("hurt");
     }
     public void Attack1()
     {

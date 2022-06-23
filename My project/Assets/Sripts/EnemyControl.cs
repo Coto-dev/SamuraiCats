@@ -90,7 +90,7 @@ public class EnemyControl : MonoBehaviour
     public void onEnemyAttack()
     {
         player1.TakeDamage(damage);
-        player1.health -= damage * 2;
+       // player1.health -= damage * 2;
         timeBtwAttack = startTimeBtwAttack;
     }
     public void TakeDamage(int damage1)
@@ -105,6 +105,10 @@ public class EnemyControl : MonoBehaviour
                 animator.Play("Die");
                 Destroy(gameObject, 0.75f);           
         }
+    }
+    public void SlowSpeed()
+    {
+        speed /= 1.1f;
     }
     public void Die()
     {
