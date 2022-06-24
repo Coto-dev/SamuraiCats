@@ -9013,7 +9013,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 6.1867185
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -9037,7 +9037,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266529636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.8, y: 12.1, z: -20}
+  m_LocalPosition: {x: -11.76, y: -3.67, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25895,12 +25895,12 @@ PrefabInstance:
     - target: {fileID: 7242602591920836834, guid: 6d497e1fbf1519c4f81266cf942cfa31,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.57
+      value: -11.53
       objectReference: {fileID: 0}
     - target: {fileID: 7242602591920836834, guid: 6d497e1fbf1519c4f81266cf942cfa31,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.81
+      value: -3.040001
       objectReference: {fileID: 0}
     - target: {fileID: 7242602591920836834, guid: 6d497e1fbf1519c4f81266cf942cfa31,
         type: 3}
@@ -28070,6 +28070,8 @@ GameObject:
   - component: {fileID: 1873481314}
   - component: {fileID: 1873481316}
   - component: {fileID: 1873481315}
+  - component: {fileID: 1873481317}
+  - component: {fileID: 1873481318}
   m_Layer: 0
   m_Name: trigger
   m_TagString: Untagged
@@ -28085,7 +28087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873481313}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.11, y: 0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28213,6 +28215,35 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1873481317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873481313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c428ec86a09b4b489f650f13c9274b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneid: 5
+--- !u!19719996 &1873481318
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873481313}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!4 &1879599433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: 9fb66d8c9d3b5194a82e9eed65a54afb,
