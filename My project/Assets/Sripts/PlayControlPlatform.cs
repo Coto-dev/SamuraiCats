@@ -69,6 +69,7 @@ Vector2 CPoint = new Vector2(55.8f, -1.9f);
 			body.gravityScale = 0;
 			body.drag = 10;
 		}
+		Time.fixedDeltaTime = 1f / 64;
 	}
 
 	void OnCollisionStay2D(Collision2D coll)
