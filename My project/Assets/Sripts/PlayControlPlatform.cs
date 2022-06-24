@@ -25,9 +25,9 @@ public class PlayControlPlatform : MonoBehaviour
 	private Rigidbody2D body;
 	private float rotationY;
 	private bool jump;
+	Animator animator;
 
-	
-	private float timeBtwAttack;
+	/*private float timeBtwAttack;
 	public float startTimeBtwAttack;
 	//public float speed;
 	public int health;
@@ -42,9 +42,9 @@ public class PlayControlPlatform : MonoBehaviour
 	public Transform magic;
 	public LayerMask enemy;
 	public float attackRange;
-	public HealthBar healthBar;
+	public HealthBar healthBar;*/
 
-Vector2 CPoint = new Vector2(55.8f, -1.9f);
+	Vector2 CPoint = new Vector2(55.8f, -1.9f);
 
   //  class cPoint
   //  {
@@ -62,7 +62,7 @@ Vector2 CPoint = new Vector2(55.8f, -1.9f);
 	{
 		body = GetComponent<Rigidbody2D>();
 		body.fixedAngle = true;
-
+		animator = GetComponent<Animator>();
 		//CPoint = new Vector2(55.8f, -1.9f);
 		if (projectAxis == ProjectAxis.xAndY)
 		{
@@ -119,18 +119,27 @@ Vector2 CPoint = new Vector2(55.8f, -1.9f);
 
 		if (Mathf.Abs(body.velocity.x) > speed / 100f)
 		{
-			body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * speed / 100f, body.velocity.y);
+            animator.SetBool("Walk", true);
+            animator.SetBool("idle", false);
+            body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * speed / 100f, body.velocity.y);
 		}
-
+        else
+        {
+			animator.SetBool("idle", true);
+			animator.SetBool("Walk", false);
+		}
 		if (projectAxis == ProjectAxis.xAndY)
 		{
 			if (Mathf.Abs(body.velocity.y) > speed / 100f)
 			{
+				/*animator.SetBool("Walk", false);
+				animator.SetBool("idle", false);*/
 				body.velocity = new Vector2(body.velocity.x, Mathf.Sign(body.velocity.y) * speed / 100f);
 			}
 		}
 		else
 		{
+			
 			if (Input.GetKey(addForceButton) && jump)
 			{
 				body.velocity = new Vector2(0, addForce);
