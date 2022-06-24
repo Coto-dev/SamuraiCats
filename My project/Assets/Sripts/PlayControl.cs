@@ -25,6 +25,7 @@ public class PlayControl : MonoBehaviour
     public LayerMask enemy;
     public float attackRange;
     public HealthBar healthBar;
+    private float timer = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,13 @@ public class PlayControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             magAnimWater.SetTrigger("Fire");
+        }
+        if (health <= 0)
+        {
+            animator.Play("DieOrFall");
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     void FixedUpdate()
@@ -77,14 +85,18 @@ public class PlayControl : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-
-        Walk();
-        Flip();
-       
-        if (health <= 0)
+        if (health > 0)
         {
-            SceneManager.LoadScene(4);
+            Walk();
+            Flip();
         }
+      /*  if (health <= 0)
+        {
+            animator.Play("DieOrFall");
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }*/
         
     }
     public void TakeDamage(int damage)
@@ -100,9 +112,15 @@ public class PlayControl : MonoBehaviour
         Debug.Log("enemies  " + enemies.Length);
         for (int i = 0; i < enemies.Length; i++)
         {
-            Debug.Log("enemies  " + enemies[i]);
-            enemies[i].GetComponent<EnemyControl>().TakeDamage(damage*2);
-            Debug.Log(damage*2);
+            try
+            {
+                enemies[i].GetComponent<EnemyControl>().TakeDamage(damage*2);
+            }
+            catch
+            {
+                enemies[i].GetComponent<BossControl>().TakeDamage(damage*2);
+
+            }
         }
         Debug.Log("EEEEEEEEEEEEEEEEEEEEEEEEE");
         animator.SetBool("attack1", false);
