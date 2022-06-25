@@ -26,6 +26,7 @@ public class PlayControl : MonoBehaviour
     public float attackRange;
     public HealthBar healthBar;
     private float timer = 0.3f;
+    public bool isMagic;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,14 +38,16 @@ public class PlayControl : MonoBehaviour
     }
 
     private void LateUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
+    { if (isMagic)
         {
-            magAnim.SetTrigger("Fire");
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            magAnimWater.SetTrigger("Fire");
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                magAnim.SetTrigger("Fire");
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                magAnimWater.SetTrigger("Fire");
+            }
         }
         if (health <= 0)
         {
