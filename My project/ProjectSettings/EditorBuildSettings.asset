@@ -29,7 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story.unity
     guid: abc164e9b9e501347858d53a618e96eb
-  - enabled: 1
-    path: Assets/Scenes/castle2 1.unity
-    guid: 9cf60ef0be42e7a4f91c404695d2f142
   m_configObjects: {}
